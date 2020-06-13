@@ -12,6 +12,7 @@ Thumbs.db
 # Folders
 build/
 node_modules/
+**/_psd
 
 
 # Icon must end with two \r
