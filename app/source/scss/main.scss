@@ -1,0 +1,37 @@
+@import "fonts";
+@import "variables";
+@import "mixins";
+@import "body";
+/* БЭМ блоки будущего макета */
+@import "blocks/main-nav";
+@import "blocks/btn";
+@import "blocks/container";
+@import "blocks/main-header";
+@import "blocks/intro";
+@import "blocks/feature";
+@import "blocks/detail";
+@import "blocks/booking";
+@import "blocks/social";
+@import "blocks/feedback";
+@import "blocks/checklist";
+@import "blocks/gallery";
+@import "blocks/popup";
+
+
+/* Стили для разных экранов */
+
+// @media (max-width: $mobile-width-only) {
+  
+// }
+
+// @media (min-width: $mobile-width) {
+  
+// }
+
+// @media (min-width: $tablet-width) {
+
+// }
+
+// @media (min-width: $desktop-width) {
+ 
+// }
