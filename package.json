@@ -1,0 +1,29 @@
+{
+  "name": "sedona-adaptive-training-project",
+  "version": "1.0.0",
+  "description": "training project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/oddman-lab/scss-gulp-adaptive-site.git"
+  },
+  "keywords": [
+    "adaptive",
+    "scss",
+    "css",
+    "html5",
+    "js"
+  ],
+  "author": "Ilya Oddman",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/oddman-lab/scss-gulp-adaptive-site/issues"
+  },
+  "homepage": "https://github.com/oddman-lab/scss-gulp-adaptive-site#readme",
+  "devDependencies": {
+    "gulp": "^4.0.2"
+  }
+}
