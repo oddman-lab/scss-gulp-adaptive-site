@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/main.css">
+    <script src='js/script.js' defer></script>
     <title>Sedona</title>
 </head>
 <body>
@@ -13,8 +14,8 @@
         <nav class="header__nav main-nav">
 
             <ul class="main-nav__list mobile-hidden">
-                <li class="main-nav__item">Главная</li>
-                <li class="main-nav__item">Фото и видео</li>
+                <li class="main-nav__item main-nav__item--mobile">Главная</li>
+                <li class="main-nav__item main-nav__item--mobile">Фото и видео</li>
                 <li class="main-nav__item main-nav__item--logotype">
                     <picture>
                         <source media="(min-width: 1200px)" srcset="img/desktop/logotype-desktop.png">
@@ -22,8 +23,8 @@
                         <img src="img/logotyle-mobile-svg@2x.png" alt="Логотип Sedona" width="102" height="83" class="main-nav__logo-image">
                     </picture>
                 </li>
-                <li class="main-nav__item">Форма отзыва</li>
-                <li class="main-nav__item">Github</li>
+                <li class="main-nav__item main-nav__item--mobile">Форма отзыва</li>
+                <li class="main-nav__item main-nav__item--mobile">Github</li>
             </ul>
             <picture class="after-mobile-hidden">
                 <img src="img/logotyle-mobile-svg@2x.png" alt="Логотип Sedona" width="102" height="83" class="main-nav__logo-image">
@@ -154,7 +155,9 @@
         </p>
         <button class="button hotel__button">Найти гостиницу</button>
         <div class="map">
-            ///MAP HERE///
+            <picture class="map__frame">
+                <img src="img/map-marker.jpg" alt="" class="map__image" draggable="false">
+            </picture>
         </div>
     </section>
 
