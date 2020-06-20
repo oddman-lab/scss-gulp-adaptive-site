@@ -1,22 +1,4 @@
-body {
-    position: relative;
-    min-width: 320px;
-    margin: 0;
-    padding: 0;
-  
-    font-size: 18px;
-    line-height: 26px;
-    font-family: "PT Sans", "Arial", sans-serif;
-    color: $black;
-    font-weight: normal;
-    background-color: $grey100;
-  }
-  
-  img {
-    max-width: 100%;
-    height: auto;
-  }
-  
+
   .visually-hidden:not(:focus):not(:active),
   input[type="checkbox"].visually-hidden,
   input[type="radio"].visually-hidden {
