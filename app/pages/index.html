@@ -3,9 +3,175 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css">
+    <title>Sedona</title>
 </head>
 <body>
-    
+    <div class="container-mw">
+    <header class="header">
+        <nav class="header__nav main-nav">
+
+            <ul class="main-nav__list mobile-hidden">
+                <li class="main-nav__item">Главная</li>
+                <li class="main-nav__item">Фото и видео</li>
+                <li class="main-nav__item main-nav__item--logotype">
+                    <picture>
+                        <source media="(min-width: 1200px)" srcset="img/desktop/logotype-desktop.png">
+                        <source media="(min-width: 680px)" srcset="img/tablet/logotype-tablet.png">
+                        <img src="img/logotyle-mobile-svg@2x.png" alt="Логотип Sedona" width="102" height="83" class="main-nav__logo-image">
+                    </picture>
+                </li>
+                <li class="main-nav__item">Форма отзыва</li>
+                <li class="main-nav__item">Github</li>
+            </ul>
+            <picture class="after-mobile-hidden">
+                <img src="img/logotyle-mobile-svg@2x.png" alt="Логотип Sedona" width="102" height="83" class="main-nav__logo-image">
+            </picture>
+            <button class="main-nav__toggle"></button>
+        </nav>
+        <h1 class="visually-hidden">Добро пожаловать в Седону!</h1>
+        <div class="header__logo-image">
+
+        </div>
+    </header>
+    <section class="feature">
+        <div class="wrapper">
+            <h2 class="feature__title title">
+                Седона – небольшой городок в Аризоне, <br>
+                заслуживающий большего!
+            </h2> 
+            <p class="feature__subtitle subtitle">
+                Рассмотрим 5 причин, по которым Седона круче, чем Гранд каньон!
+            </p>
+        </div>
+        <div class="feature__banner banner">
+            <div class="banner__about banner__about--triangle-background">
+                <h3 class="banner__title title">Настоящий городок</h3>
+                <p class="banner__number number">№ 1</p>
+                <p class="banner__subtitle subtitle">
+                    Седона не аттракцион<br>
+                    для туристов, там<br>
+                    течет своя жизнь
+                </p>
+            </div>
+            <div class="banner__image">
+                <picture>
+                    <source media="(min-width: 1200px)" srcset="img/desktop/photo-city.png">
+                    <source media="(min-width: 680px)" srcset="/img/tablet/photo-city@2x.png">
+                        <img src="/img/photo-city-1-x.png" class="banner__content-img" alt="">
+                </picture>
+            </div>
+        </div>
+        <ul class="feature__list">
+            <li class="feature__item item item--home">
+                <h3 class="item__title title">Жилье</h3>
+                <p class="item__subtitle subtitle">
+                    Рекомендуется пожить<br>
+                    в настоящем мотеле,<br> 
+                    все как в кино!
+                </p>
+            </li>
+            <li class="feature__item item item--food">
+                <h3 class="item__title title">Еда</h3>
+                <p class="item__subtitle subtitle">
+                    Всегда заказывайте<br> 
+                    фирменный бургер,<br> 
+                    вы не разочаруетесь!
+                </p>
+            </li>
+            <li class="feature__item item item--souvenirs">
+                <h3 class="item__title title">Сувениры</h3>
+                <p class="item__subtitle subtitle">
+                    Не только китайского,<br>
+                    но и местного<br>
+                    производства!
+                </p>
+            </li>
+        </ul>
+        <div class="feature__banner banner">
+            <div class="banner__about banner__about--order">
+                <h3 class="banner__title title">Там есть <br>мост дьвола</h3>
+                <p class="banner__number number">№ 2</p>
+                <p class="banner__subtitle subtitle">
+                    Да, по нему можно<br>
+                    пройти! Если вы<br>
+                    осмелитесь, конечно
+                </p>
+            </div>
+            <div class="banner__image">
+                <picture>
+                    <source media="(min-width: 1200px)" srcset="/img/desktop/photo-bridge@2x.png">
+                    <source media="(min-width: 680px)" srcset="/img/tablet/photo-bridge.png">
+                        <img src="/img/photo-bridge-1-x@2x.png" class="banner__content-img" alt="">
+                </picture>
+            </div>
+        </div>
+        <ul class="feature__list feature__list--graybackground">
+            <li class="feature__item">
+                <h3 class="feature__title title">
+                    Небольшая<br>
+                    площадь
+                </h3>
+                <p class="feature__number number">№3</p>
+                <p class="feauture__subtitle subtitle">
+                    Все интересные места<br>
+                    находятся очень<br>
+                    близко
+                </p>
+            </li>
+            <li class="feature__item">
+                <h3 class="feature__title title">
+                    Красивая<br>
+                    дорога
+                </h3>
+                <p class="feature__number number">№4</p>
+                <p class="feauture__subtitle subtitle">
+                    Ехать в Седону из<br>
+                    Лас-Вегаса совсем<br>
+                    не скучно!
+                </p>
+            </li>
+            <li class="feature__item">
+                <h3 class="feature__title title">
+                    Мало<br>
+                    туристов
+                </h3>
+                <p class="feature__number number">№5</p>
+                <p class="feauture__subtitle subtitle">
+                    Большинство едет в
+                    Градн Каньон и<br>
+                    толпится там
+                </p>
+            </li>
+        </ul> 
+    </section>
+    <section class="hotel">
+        <h4 class="hotel__title title">Заинтересовались?</h4>
+        <p class="hotel__subtitle subtitle">
+            Укажите предполагаемые даты поездки,<br>
+            и мы покажем вам лучшие предложения гостиниц в Седоне
+        </p>
+        <button class="button hotel__button">Найти гостиницу</button>
+        <div class="map">
+            ///MAP HERE///
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p class="footer__hastag">
+            #VISITSEDONA
+        </p>
+        <ul class="footer__social social-list">
+            <li class="social-list__item social-list__item--twitter"></li>
+            <li class="social-list__item social-list__item--facebook"></li>
+            <li class="social-list__item social-list__youtube"></li>
+        </ul>
+        <div class="copyright">
+            <p class="copyrirht__text">Разработано</p>
+            <img src="https://placehold.it/31x35" alt="" class="copyright__logo">
+        </div>
+    </footer>
+</div>
 </body>
 </html>
