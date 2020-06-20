@@ -2,7 +2,7 @@
   "name": "sedona-adaptive-training-project",
   "version": "1.0.0",
   "description": "training project",
-  "main": "index.js",
+  "main": "gulpfile.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -24,6 +24,11 @@
   },
   "homepage": "https://github.com/oddman-lab/scss-gulp-adaptive-site#readme",
   "devDependencies": {
-    "gulp": "^4.0.2"
+    "browser-sync": "^2.26.7",
+    "gulp": "^4.0.2",
+    "gulp-sass": "^4.1.0"
+  },
+  "dependencies": {
+    "path": "^0.12.7"
   }
 }
