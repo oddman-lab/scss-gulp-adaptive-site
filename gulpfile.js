@@ -92,4 +92,5 @@ gulp.task('watch', function() {
 	gulp.watch(paths.app.html, gulp.parallel('html'));
 	gulp.watch(paths.app.img, gulp.parallel('images'));
 });
-gulp.task('default', gulp.parallel('sass', 'html','server', 'watch'));
+
+gulp.task('default', gulp.parallel('sass', 'fonts', 'html', 'images', 'server', 'watch'));
