@@ -1,17 +1,17 @@
-// @font-face {
-//     font-family: "PT Sans";
-//     src: url("../fonts/PTSans-Regular.woff2") format("woff2"), 
-//         url("../fonts/PTSans-Regular.woff" format("woff"),
-//         url("../fonts/PTSans-Regular.eot") format("eot"));
-//     font-weight: normal;
-//     font-display: fallback;
-//   }
+@font-face {
+    font-family: "PT Sans";
+    src: url("../fonts/PTSans-Regular.woff2") format("woff2"), 
+        url("../fonts/PTSans-Regular.woff" format("woff"),
+        url("../fonts/PTSans-Regular.eot") format("eot"));
+    font-weight: normal;
+    font-display: fallback;
+  }
   
-//   @font-face {
-//     font-family: "PT Sans";
-//     src: url("../fonts/PTSans-Bold.woff2") format("woff2"), 
-//         url("../fonts/PTSans-Bold.woff" format("woff"),
-//         url("../fonts/PTSans-Bold.eot") format("eot"));
-//     font-weight: bold;
-//     font-display: fallback;
-//   }
+  @font-face {
+    font-family: "PT Sans";
+    src: url("../fonts/PTSans-Bold.woff2") format("woff2"), 
+        url("../fonts/PTSans-Bold.woff" format("woff"),
+        url("../fonts/PTSans-Bold.eot") format("eot"));
+    font-weight: bold;
+    font-display: fallback;
+  }
