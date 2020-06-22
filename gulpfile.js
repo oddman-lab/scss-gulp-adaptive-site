@@ -7,6 +7,7 @@ const imagemin = require('gulp-imagemin');
 const jpegrecompress = require('imagemin-jpeg-recompress');
 const pngquant = require('imagemin-pngquant');
 const del = require('del');
+const { getDefaultSettings } = require('http2');
 const browserSync = require('browser-sync').create();
 
 // Пути директорий
@@ -18,17 +19,20 @@ const paths = {
 	build: {
 		html: path.join(dirBuild),
 		css: path.join(dirBuild, 'css'),
+		fonts: path.join(dirBuild, 'fonts'),
 		img: path.join(dirBuild, 'img'),
 		// js: path.join(dirBuild, 'js'),
-		// fonts: path.join(dirBuild, dirSource, 'fonts'),
+		
 		
 	},
 	app: {
 		html: path.join(dirApp, 'pages', '*.html'),
 		style: path.join(dirApp, dirSource, 'scss', 'main.scss'),
+		fonts: path.join(dirApp, dirSource, 'fonts', '*.*'),
 		img: path.join(dirApp, dirSource, 'img', '**/*.*'),
 	}
 }
+
 // app/source/scss/main.scss
 gulp.task('sass', function() {
 	return gulp.src(paths.app.style)
@@ -37,12 +41,19 @@ gulp.task('sass', function() {
 	.pipe(gulp.dest(paths.build.css))
 	.pipe(browserSync.reload({stream: true}))
 })
+
 // следим за html
 gulp.task('html', function() {
 	return gulp.src(paths.app.html)
 	.pipe(gulp.dest(paths.build.html))
 	.pipe(browserSync.reload({stream: true}))
 });
+
+// собираем шрифты
+gulp.task('fonts', function() {
+	return gulp.src(paths.app.fonts)
+	.pipe(gulp.dest(paths.build.fonts))
+})
 
 // Удаляем build перед сборкой
 gulp.task('clean', function() {
