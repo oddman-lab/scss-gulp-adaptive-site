@@ -3,9 +3,154 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/main.css">
+    <script src='js/script.js' defer></script>
     <title>Document</title>
 </head>
 <body>
+    <div class="container-mw">
+        <header class="header header--trimmed">
+            <nav class="header__nav main-nav">
     
+                <ul class="main-nav__list mobile-hidden">
+                    <li class="main-nav__item main-nav__item--mobile">Главная</li>
+                    <li class="main-nav__item main-nav__item--mobile">Фото и видео</li>
+                    <li class="main-nav__item main-nav__item--logotype">
+                        <picture>
+                            <source media="(min-width: 1200px)" srcset="img/desktop/logotype-desktop.png">
+                            <source media="(min-width: 680px)" srcset="img/tablet/logotype-tablet.png">
+                            <img src="img/logotyle-mobile-svg@2x.png" alt="Логотип Sedona" width="102" height="83" class="main-nav__logo-image">
+                        </picture>
+                    </li>
+                    <li class="main-nav__item main-nav__item--mobile">Форма отзыва</li>
+                    <li class="main-nav__item main-nav__item--mobile">Github</li>
+                </ul>
+
+                <picture class="after-mobile-hidden">
+                    <img src="img/logotyle-mobile-svg@2x.png" alt="Логотип Sedona" width="102" height="83" class="main-nav__logo-image">
+                </picture>
+
+                <button class="main-nav__toggle"></button>
+            </nav>
+
+            <h1 class="visually-hidden">Форма обратной связи о посещении Седоны!</h1>
+            
+            <div class="header__logo-image"></div>
+        </header>
+        
+        <section class="feedback">
+            <div class="feedback__wrapper">
+            <p class="title feedback__title">Оставьте свой отзыв</p>
+            <p class="subtitle 1feedback__subtitle">
+                Помогите нашим отелям стать лучше!<br> 
+                оставьте отзыв о них, а также о<br> 
+                посещенных вами достопримечательностях
+            </p>
+
+            <form class="feedback__form form" method="POST" action="https://echo.htmlacademy.ru">
+
+                <fieldset class="form__section form__section--name">
+                  <legend class="form__subtitle">Представьтесь:</legend>
+                  <p class="form__field">
+                    <label for="user-name">Имя<sup>*</sup>:</label>
+                    <input id="user-name" type="text" name="user-name" placeholder="Петр" required>
+                  </p>
+                   <p class="form__field">
+                    <label for="user-surname">Фамилия<sup>*</sup>:</label>
+                    <input id="user-surname" type="text" name="user-surname" placeholder="Иванов" required>
+                  </p>
+                   <p class="form__field">
+                    <label for="user-patronymic">Отчество:</label>
+                    <input id="user-patronymic" type="text" name="user-patronymic" placeholder="Александрович">
+                  </p>
+                </fieldset>
+                
+                <fieldset class="form__section">
+                  <legend class="form__subtitle">Контактная информация:</legend>
+                  <div class="form__inner">
+                    <div class="form__field form__field--contacts">
+                      <label for="user-tel">Контактный телефон<sup>*</sup>:</label>
+                      <p class="icon icon--phone">
+                        <input id="user-tel" type="tel" name="user-phone" placeholder="Введите телефон">
+                      </p>
+                    </div>
+                    <div class="form__field form__field--contacts">
+                      <label for="user-email">Электронная почта<sup>*</sup>:</label>
+                      <p class="icon icon--email">
+                      <input id="user-email" type="email" name="user-email" placeholder="Введите e-mail">
+                      </p>
+                    </div>
+                  </div>
+                </fieldset>
+
+                <fieldset class="form__section checklist form__section--impression">
+                  <legend class="form__subtitle">Ваше общее впечатление:</legend>
+                  <div class="checklist__wrapper">
+                    <p>
+                        <input class="checklist__input" id="impression-good" type="radio" name="impression" value="good"checked>
+                        <label class="checklist__label" for="impression-good">Скорее положительное
+                        </label>
+                    </p>
+                    <p>
+                        <input class="checklist__input" id="impression-bad" type="radio" name="impression" value="bad">
+                        <label class="checklist__label" for="impression-bad">Скорее отрицательное</label>
+                    </p>
+                    <p>
+                        <input class="checklist__input" id="impression-neutral" type="radio" name="impression" value="neutral">
+                        <label  class="checklist__label" for="impression-neutral">Затрудняюсь ответить
+                        </label>
+                    </p>
+                </div>
+                </fieldset>
+
+                <fieldset class="form__section checklist checklist--places">
+                  <legend class="form__subtitle">Посещенные <br>достопримечательности:</legend>
+                  <div class="checklist__wrapper">
+                    <p>
+                      <input class="checklist__input checklist__input--tick" id="place-devilbridge" type="checkbox" name="visited-places" value="devilbridge" checked>
+                      <label class="checklist__label checklist__label--checkbox" for="place-devilbridge"> Мост Дьявола</label>
+                    </p>
+                    <p>
+                       <input  class="checklist__input checklist__input--tick" id="place-bellmountain" type="checkbox" name="visited-places" value="bellmountain" checked>
+                       <label class="checklist__label checklist__label--checkbox" for="place-bellmountain">Гора-Колокол</label>
+                    </p>
+                    <p>
+                      <input  class="checklist__input checklist__input--tick" id="place-slidepark" type="checkbox" name="visited-places" value="slidepark">
+                      <label class="checklist__label checklist__label--checkbox" for="place-slidepark">Слайд-парк</label>
+                    </p>
+                    <p>
+                      <input  class="checklist__input checklist__input--tick" id="place-redrocks" type="checkbox" name="visited-places" value="redrocks" checked>
+                      <label class="checklist__label checklist__label--checkbox" for="place-redrocks">Красные скалы</label>
+                    </p>
+                  </div>
+                </fieldset>
+
+                <fieldset class="form__section form__section--comment">
+                  <legend class="form__subtitle">Опишите свои эмоции:</legend>
+                    <textarea  class="feedback__comment" placeholder="Опишите подробно все свои восторги"></textarea>
+                </fieldset>
+
+                <div class="form__btn-wrapper">
+                  <button class="form__btn button" type="submit">Отправить отзыв</button>
+                  <p class="form__caution"><sup>*</sup> - Обязательные поля</p>
+                </div>
+              </form>
+            </div>
+        </section>
+    </div>
+    <footer class="footer">
+        <p class="footer__hastag">
+            #VISITSEDONA
+        </p>
+        <ul class="footer__social social-list">
+            <li class="social-list__item social-list__item--twitter"></li>
+            <li class="social-list__item social-list__item--facebook"></li>
+            <li class="social-list__item social-list__item--youtube"></li>
+        </ul>
+        <div class="copyright">
+            <p class="copyrirht__text">Разработано</p>
+            <img src="/img/htmlacademy.png" alt="" class="copyright__logo">
+        </div>
+    </footer>
 </body>
 </html>
