@@ -1,0 +1,38 @@
+/* DESKTOP STYLES */
+
+@media (min-width: $desktop-width) {
+    body {
+        background-color: #f2f2f2;
+    }
+
+    .container-mw {
+        background-color: #ffffff;
+        max-width: 1200px;
+        display: flex;
+        flex-direction: column;
+        margin: 0 auto;
+    }
+
+    .header-nav {}
+
+    .main-nav__list {
+        justify-content: space-around;
+    }
+
+    .main-nav__logo-image {
+        width: 100%;
+        height: auto;
+        position: relative;
+        margin-left: 0;
+        left: -10px;
+    }
+
+    .feature__banner {
+        
+        .banner__about {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+    }
+}
