@@ -42,12 +42,18 @@ input[type="radio"].visually-hidden {
 }
 
 /* Стили для разных экранов */
+
 @import "mobile-style";
 @import "tablet-style";
 @import "desktop-style";
 
+
+
+
+
 /* FORM PAGE */
 
+@media (min-width: $mobile-width) {
 
 .header {
     &--trimmed {
@@ -193,11 +199,11 @@ input[type="radio"].visually-hidden {
     }
 
     &--phone::after {
-        background-image: url(/img/form/phone.png);
+        background-image: url(/img/form/phone.svg.png);
         
     }
     &--email::after {
-        background-image: url(/img/form/mail.png);
+        background-image: url(/img/form/mail.svg.png);
     }
 }
 
@@ -281,4 +287,408 @@ input[type="radio"].visually-hidden {
 
 .form__btn {
     width: 100%;
+}
+
+}
+
+
+@media (min-width: $tablet-sm-width) {
+
+    .header {
+        &--trimmed {
+            height: 320px;
+            
+        }
+    
+        &__logo-image {
+            top: -50px;
+            margin-bottom: 0;
+            padding-top: 30px;
+            padding-bottom: 30px;
+        }
+    }
+    
+    .feedback {
+        &__wrapper {
+            width: 648px;
+            margin: 0 auto;
+        }
+        &__title {
+            font-size: 30px;
+            margin-top: 45px;
+        }
+        &__subtitle {
+            margin-bottom: 80px;
+            font-weight: bold;
+            width: 435px;
+
+            br {
+                display: none;
+            }
+        }
+        &__comment {
+            border: 1px solid gray;
+            margin: 60px auto 0px auto;
+            padding: 10px 0px 10px 10px;
+            font-size: 18px;
+            font-weight: bold;
+            width: 100%;
+            min-height: 140px;
+        }
+    }
+    
+    .form {
+        display: flex;
+        flex-direction: row-reverse;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        position: relative;
+    
+        input {
+    
+            &:focus {
+                background-color: #fff;
+                outline: none;
+                outline: 2px solid #e6e6e6;
+            }
+            &:hover,
+            &:active {
+                cursor: pointer;
+            }
+        }
+        &__section {
+            border: 2px groove #dbdbdb;
+            border-left-width: 0;
+            border-right-width: 0;
+            border-bottom-width: 0;
+            padding: 0;
+            margin: 0;
+            margin-bottom: 40px;
+            width: 50%;
+
+            &::after,
+            &::before {
+                content: '';
+                background-color: transparent;
+                position: absolute;
+                left: 0;
+                width: 0;
+                height: 0;
+                margin-top: 0;
+            }
+            &--contacts {
+                width: 100%;
+            }
+
+            &--name {
+                order: -2;
+                border: none;
+
+                .form__subtitle {
+                    padding: 0;
+                    margin-bottom: 65px;
+                }
+            }
+
+            &--impression {
+                order: -2;
+                border: none;
+                
+                .checklist__wrapper {
+                    padding-top: 8px;
+                }
+
+                .form__subtitle {
+                    padding: 0;
+                    margin-bottom: 65px;
+                }
+            }
+
+            &--comment {
+                width: 100%;
+            }
+
+            &--comment::after {
+                content: '';
+                width: 0px;
+                height: 0px;
+                background-color: transparent;
+            }
+        }
+        
+        &__subtitle {
+            
+            font-size: 21px;
+            font-weight: bold;
+            text-align: center;
+            text-transform: uppercase;
+            padding: 5px 60px;
+        }
+    
+        &__field {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+    
+            label {
+                font-size: 14px;
+                text-transform: uppercase;
+                text-align: right;
+                padding-right: 20px;
+                margin-left: 35px;
+                width: 20%;
+            }
+            input {
+                background-color: #f2f2f2;
+                border: 2px solid #f2f2f2;
+                width: 180px;
+                padding-top: 19px;
+                padding-bottom: 19px;
+                padding-left: 10px;
+                font-size: 18px;
+                color: $black;
+                font-weight: bold;
+                text-transform: none;
+            }
+    
+            &--contacts {
+                display: block;
+                position: relative;
+        
+                label {
+                    font-size: 14px;
+                    text-transform: uppercase;
+        
+                }
+                input {
+                    box-sizing: border-box;
+                    padding-top: 20px;
+                    padding-bottom: 20px;
+                    width: 90%;
+        
+                }
+                
+            }
+    
+        }
+
+        &__btn-wrapper {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            flex-grow: 1;
+
+            button {
+                width: 325px;
+                height: 60px;
+            }
+        }
+    }
+    .checklist {
+
+        &--places {
+            width: 100%;
+
+            .checklist__wrapper {
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: center;
+
+                p {
+                    width: 35%;
+                    margin-left: 70px;
+                }
+            }
+        }
+        &__wrapper {
+            display: flex;
+            flex-direction: column;
+            margin-left: 0px;
+            padding-top: 30px;
+            padding-bottom: 30px;
+
+            p {
+                margin: 25px 0;
+            }
+        }
+    
+        &__input {
+            border: none;
+            border-radius: 50%;
+            width: 0px;
+            height: 0px;
+            margin-right: 20px;
+            vertical-align: middle;
+    
+            &:focus,
+            &:active {
+                border: none !important;
+                outline: none !important;
+            }
+    
+            &--tick {
+                width: 0px;
+                height: 0px;
+                margin-right: 20px;
+            }
+        }
+    
+        &__label {
+            font-weight: bold;
+            vertical-align: sub;
+            padding-left: 15px;
+            position: relative;
+    
+            &::before {
+                content: '';
+                position: absolute;
+                top: -20px;
+                left: -70px;
+                border-radius: 50%;
+                width: 60px;
+                height: 60px;
+                background-color: #f2f2f2;;
+            }
+    
+            &--checkbox::before {
+                border-radius: 0;
+            }
+        }
+    
+    }
+
+    .icon {
+        &::after {
+            background-repeat: no-repeat;
+            background-position: 50%;
+            content: "";
+            position: absolute;
+            width: 60px;
+            height: 65px;
+            top: 48px;
+            right: 5px;
+            background-color: #e6e6e6;
+        }
+    
+        &--phone::after {
+            background-image: url(/img/form/phone.svg.png);
+            
+        }
+        &--email::after {
+            background-image: url(/img/form/mail.svg.png);
+        }
+    }
+
+
+    .checklist__input:not(:checked) ~ .checklist__label::before {
+        background-color: #f2f2f2;
+    } 
+    .checklist__input:checked ~ .checklist__label::after {
+        position: absolute;
+        content: '';
+        background-color: #333333;
+        border-radius: 50%;
+        width: 20px;
+        height: 20px;
+        left: -49px;
+        top: 0px;
+    }
+    
+    .checklist__input--tick:checked ~ .checklist__label--checkbox::after {
+        background-image: url('/img/form/tick.png');
+        background-color: transparent;
+        background-repeat: no-repeat;
+        background-position: 50%;
+        position: absolute;
+        border-radius: 0;
+        height: 24px;
+        width: 24px;
+        content: ' ';
+        left: -50px;
+        top: 0;
+    }
+
+}
+
+@media (min-width: $desktop-width) { 
+    .feedback__wrapper {
+        width: 1200px;
+    }
+
+
+    .form {
+        display: flex;
+        flex-direction: row-reverse;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        position: relative;
+    
+        input {
+    
+            &:focus {
+                background-color: #fff;
+                outline: none;
+                outline: 2px solid #e6e6e6;
+            }
+            &:hover,
+            &:active {
+                cursor: pointer;
+            }
+        }
+        &__section {
+            border: 2px groove #dbdbdb;
+            border-left-width: 0;
+            border-right-width: 0;
+            border-bottom-width: 0;
+            padding: 0;
+            margin: 0;
+            margin-bottom: 40px;
+            width: 50%;
+
+            &::after,
+            &::before {
+                content: '';
+                background-color: transparent;
+                position: absolute;
+                left: 0;
+                width: 0;
+                height: 0;
+                margin-top: 0;
+            }
+            &--contacts {
+                width: 50%;
+            }
+
+            &--name {
+                order: -2;
+                border: none;
+
+                .form__subtitle {
+                    padding: 0;
+                    margin-bottom: 65px;
+                }
+            }
+
+            &--impression {
+                order: -2;
+                border: none;
+
+                .form__subtitle {
+                    padding: 0;
+                    margin-bottom: 65px;
+                }
+            }
+
+            &--comment {
+                width: 100%;
+            }
+
+            &--comment::after {
+                content: '';
+                width: 0px;
+                height: 0px;
+                background-color: transparent;
+            }
+        }
+    }
 }
