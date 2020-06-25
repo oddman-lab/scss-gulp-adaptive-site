@@ -39,6 +39,16 @@ input[type="radio"].visually-hidden {
     font-weight: 700;
     text-transform: uppercase;
     height: 58px;
+
+    &:hover {
+        background-color: #669ec0;
+        cursor: pointer;
+    }
+
+    &:active {
+        background-color: #5496bd;
+        outline: none;
+    }
 }
 
 /* Стили для разных экранов */
@@ -583,6 +593,10 @@ input[type="radio"].visually-hidden {
     .checklist__input:not(:checked) ~ .checklist__label::before {
         background-color: #f2f2f2;
     } 
+    .checklist__input:hover ~ .checklist__label::before {
+        background-color: #e5e5e5;
+    }
+   
     .checklist__input:checked ~ .checklist__label::after {
         position: absolute;
         content: '';
@@ -612,7 +626,7 @@ input[type="radio"].visually-hidden {
 
 @media (min-width: $desktop-width) { 
     .feedback__wrapper {
-        width: 1200px;
+        width: 960px;
     }
 
 
@@ -635,6 +649,24 @@ input[type="radio"].visually-hidden {
                 cursor: pointer;
             }
         }
+        &__field {
+
+            input {
+                width: 315px;
+            }
+
+            label {
+                margin-left: 0px;
+                width: 31%;
+            }
+
+            &--contacts {
+                span {
+                    display: none;
+                }
+            }
+        }
+
         &__section {
             border: 2px groove #dbdbdb;
             border-left-width: 0;
@@ -656,8 +688,20 @@ input[type="radio"].visually-hidden {
                 margin-top: 0;
             }
             &--contacts {
-                width: 50%;
+                width: 100%;
+
+                .form__inner {
+                    display: flex;
+                    justify-content: space-between;
+
+                    .form__field {
+                        display: flex;
+                        justify-content: space-between;
+                    }
+                }
             }
+
+            
 
             &--name {
                 order: -2;
@@ -689,6 +733,62 @@ input[type="radio"].visually-hidden {
                 height: 0px;
                 background-color: transparent;
             }
+        }
+
+        &__btn-wrapper {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            flex-grow: 1;
+            margin-bottom: 60px;
+
+
+            button {
+                width: 480px;
+                height: 60px;
+            }
+        }
+    }
+
+    .checklist {
+        &--places {
+            width: 100%;
+
+            .checklist__wrapper {
+                flex-direction: row;
+                justify-content: space-between;
+
+                p {
+                    width: initial;
+                }
+            }
+        }
+        
+    }
+
+
+
+    .icon {
+        &::after {
+            background-repeat: no-repeat;
+            background-position: 50%;
+            content: "";
+            position: absolute;
+            width: 60px;
+            height: 65px;
+            top: 18px;
+            
+            background-color: #e6e6e6;
+        }
+    
+        &--phone::after {
+            background-image: url(/img/form/phone.svg.png);
+            left: 344px;
+            
+        }
+        &--email::after {
+            background-image: url(/img/form/mail.svg.png);
+            left: 420px;
         }
     }
 }
