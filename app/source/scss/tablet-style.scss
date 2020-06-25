@@ -323,6 +323,13 @@
     flex-direction: row;
     justify-content: space-around;
 }
-
+.social-list {
+    &__item {
+        &:hove {
+            background-color: #669ec0;
+            cursor: pointer;
+        }
+    }
+}
 }   
 

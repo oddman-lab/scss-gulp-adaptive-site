@@ -83,10 +83,26 @@
             text-align: center;
             list-style: none;
             height: 55px;
-        
-            &:hover {
-                cursor: pointer;
+            
+            a {
+                color: $black;
+                font-weight: bold;
+                text-decoration: none;
+
+                &:hover {
+                    cursor: pointer;
+                    color: $skyblue;
+                }
+
             }
+            .link-active {
+                color: #766357;
+
+                &:hover {
+                    color: #604e43;
+                }
+            }
+            
         
             &--mobile {
                 color: $white;
