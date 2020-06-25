@@ -9,6 +9,7 @@ const pngquant = require('imagemin-pngquant');
 const del = require('del');
 const cleanCSS = require('gulp-clean-css');
 const rename = require('gulp-rename');
+const plumber = require('gulp-plumber');
 const sourcemaps = require('gulp-sourcemaps');
 const gulpif = require('gulp-if');
 const browserSync = require('browser-sync').create();
@@ -62,7 +63,10 @@ function styles() {
 
 function stylesDev() {
 	return gulp.src(paths.app.style)
-	.pipe(sass())
+	.pipe(plumber())
+	.pipe(sass({ includePaths: ['node_modules'] })
+			.on('error', sass.logError))
+	.pipe(plumber.stop())
 	.pipe(autoprefixer(['last 5 versions', '> 1%', 'ie 8', 'ie 7'], { cascade: true }))
 	.pipe(gulp.dest(paths.build.css))
 	.pipe(browserSync.reload({stream: true}))
