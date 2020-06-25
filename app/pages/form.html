@@ -13,8 +13,10 @@
             <nav class="header__nav main-nav">
     
                 <ul class="main-nav__list mobile-hidden">
-                    <li class="main-nav__item main-nav__item--mobile">Главная</li>
-                    <li class="main-nav__item main-nav__item--mobile">Фото и видео</li>
+                    <li class="main-nav__item main-nav__item--mobile">
+                        <a href="index.html">Главная</a></li>
+                    <li class="main-nav__item main-nav__item--mobile">
+                        <a href="photo.html">Фото и видео</a></li>
                     <li class="main-nav__item main-nav__item--logotype">
                         <picture>
                             <source media="(min-width: 1200px)" srcset="img/desktop/logotype-desktop.png">
@@ -22,8 +24,10 @@
                             <img src="img/logotyle-mobile-svg@2x.png" alt="Логотип Sedona" width="102" height="83" class="main-nav__logo-image">
                         </picture>
                     </li>
-                    <li class="main-nav__item main-nav__item--mobile">Форма отзыва</li>
-                    <li class="main-nav__item main-nav__item--mobile">Github</li>
+                    <li class="main-nav__item main-nav__item--mobile">
+                        <a href="form.html" class="link-active">Форма отзыва</a></li>
+                    <li class="main-nav__item main-nav__item--mobile">
+                        <a href="https://github.com/oddman-lab/scss-gulp-adaptive-site">Github</a></li>
                 </ul>
 
                 <picture class="after-mobile-hidden">
@@ -69,7 +73,7 @@
                   <legend class="form__subtitle">Контактная информация:</legend>
                   <div class="form__inner">
                     <div class="form__field form__field--contacts">
-                      <label for="user-tel">Контактный телефон<sup>*</sup>:</label>
+                      <label for="user-tel"><span>Контактный</span> телефон<sup>*</sup>:</label>
                       <p class="icon icon--phone">
                         <input id="user-tel" type="tel" name="user-phone" placeholder="Введите телефон">
                       </p>
@@ -148,7 +152,7 @@
             <li class="social-list__item social-list__item--youtube"></li>
         </ul>
         <div class="copyright">
-            <p class="copyrirht__text">Разработано</p>
+            <p class="copyright__text">Разработано</p>
             <img src="/img/htmlacademy.png" alt="" class="copyright__logo">
         </div>
     </footer>
