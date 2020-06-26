@@ -3,9 +3,128 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/main.css">
+    <script src='js/script.js' defer></script>
     <title>Document</title>
 </head>
 <body>
-    
+    <div class="container-mw">
+    <header class="header header--trimmed">
+        <nav class="header__nav main-nav">
+
+            <ul class="main-nav__list mobile-hidden">
+                <li class="main-nav__item main-nav__item--mobile">
+                    <a href="index.html">Главная</a>
+                </li>
+                <li class="main-nav__item main-nav__item--mobile">
+                    <a href="photo.html" class="link-active">Фото и видео</a>
+                </li>
+                <li class="main-nav__item main-nav__item--logotype">
+                    <picture>
+                        <source media="(min-width: 1200px)" srcset="img/desktop/logotype-desktop.png">
+                        <source media="(min-width: 680px)" srcset="img/tablet/logotype-tablet.png">
+                        <img src="img/logotyle-mobile-svg@2x.png" alt="Логотип Sedona" width="102" height="83" class="main-nav__logo-image">
+                    </picture>
+                </li>
+                <li class="main-nav__item main-nav__item--mobile">
+                    <a href="form.html">Форма отзыва</a>
+                </li>
+                <li class="main-nav__item main-nav__item--mobile">
+                    <a href="https://github.com/oddman-lab/scss-gulp-adaptive-site">Github</a>
+                </li>
+            </ul>
+            <picture class="after-mobile-hidden">
+                <img src="img/logotyle-mobile-svg@2x.png" alt="Логотип Sedona" width="102" height="83" class="main-nav__logo-image">
+            </picture>
+            <button class="main-nav__toggle"></button>
+        </nav>
+        <h1 class="visually-hidden">Добро пожаловать в Седону!</h1>
+        <div class="header__logo-image">
+        </div>
+    </header>
+    <main class="photo">
+        <div class="wrapper">
+            <h2 class="title photo__title">Фото и видео</h2>
+            <p class="subtitle photo__subtitle">
+                Не можете решиться на путешествие из-за курса?<br>
+                Фотографии помогут вам забыть о политике и экономике.
+            </p>
+            <section class="photo__section">
+            <div class="photo__card card">
+                <div class="card__image image">
+                    <picture>
+                        <source media="(min-width: 1200px)" srcset="img/photo/desktop/photo-1-desktop.jpg.jpg">
+                        <source media="(min-width: 680px)" srcset="img/photo/tablet/photo-1-tablet.jpg.jpg">
+                        <img src="img/photo/photo-1-mobile.jpg.jpg" alt="">
+                    </picture>
+                </div>
+                <div class="card__wrapper">
+                    <div class="image__copyright">
+                        <h2 class="card__title title">Неродные просторы</h2>
+                        <p class="card__author">Автор фото: Борис</p>
+                    </div>
+                    <p class="card__like">1350</p>
+                </div>
+            </div>
+            <div class="photo__card card">
+                <div class="card__image image">
+                    <picture>
+                        <source media="(min-width: 1200px)" srcset="img/photo/desktop/photo-2-desktop.jpg.jpg">
+                        <source media="(min-width: 680px)" srcset="img/photo/tablet/photo-2-tablet.jpg.jpg">
+                        <img src="img/photo/photo-2-mobile.jpg.jpg" alt="">
+                    </picture>
+                </div>
+                <div class="card__wrapper">
+                    <div class="image__copyright">
+                        <h2 class="card__title title">Местная растительность</h2>
+                        <p class="card__author">Автор фото: Сергей</p>
+                    </div>
+                    <p class="card__like">143</p>
+                </div>
+            </div>
+            <div class="photo__card card">
+                <div class="card__image image">
+                <picture>
+                        <source media="(min-width: 1200px)" srcset="img/photo/desktop/photo-3-desktop.jpg.jpg">
+                        <source media="(min-width: 680px)" srcset="img/photo/tablet/photo-3-tablet.jpg.jpg">
+                        <img src="img/photo/photo-3-mobile.jpg.jpg" alt="">
+                    </picture>
+                </div>
+                <div class="card__wrapper">
+                    <div class="image__copyright">
+                        <h2 class="card__title title">Дорога на север</h2>
+                        <p class="card__author">Автор фото: Петр</p>
+                    </div>
+                    <p class="card__like">96</p>
+                </div>
+            </div>
+            <div class="photo__card card">
+                <div class="card__image image">
+                    <picture>
+                        <source media="(min-width: 1200px)" srcset="img/photo/desktop/photo-4-desktop.jpg.jpg">
+                        <source media="(min-width: 680px)" srcset="img/photo/tablet/photo-4-tablet.jpg.jpg">
+                        <img src="img/photo/photo-4-mobile.jpg.jpg" alt="">
+                    </picture>
+                </div>
+                <div class="card__wrapper">
+                    <div class="image__copyright">
+                        <h2 class="card__title title">Мост дьявола</h2>
+                        <p class="card__author">Автор фото: Антон</p>
+                    </div>
+                    <p class="card__like">254</p>
+                </div>
+            </div>
+        </section>
+            <div class="card card--video">
+                <h2 class="card__title">Все еще сомневаетесь?</h2>
+                <p class="card__subtitle subtitle">
+                    Смотрите видеопрезентацию и <br>
+                    скорее за билетами, пока они не <br>
+                    подорожали в очередной раз!
+                </p>
+            </div>
+        </div>
+    </main>
+</div>
 </body>
 </html>
