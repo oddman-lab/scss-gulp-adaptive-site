@@ -85,7 +85,9 @@
 }
 
 .main-nav {
-    height: 56px;
+    min-height: 56px;
+    background-color: $white;
+    padding: 0;
 
     &__list {
         background-color: transparent;

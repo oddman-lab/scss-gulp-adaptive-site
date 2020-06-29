@@ -1,6 +1,6 @@
 /* Mobile */
-
-@media (min-width: $mobile-width) {
+@media (min-width: $mobile-width),
+(max-width: $mobile-width-only) {
 
     .wrapper {
         margin: 0 auto;
@@ -471,5 +471,3 @@
     
     
     }
-    
-
